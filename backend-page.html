@@ -1,0 +1,40 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+
+Example:
+
+    <backend-page></backend-page>
+
+@group Seed Elements
+@element backend-template
+@demo demo/index.html
+@hero hero.svg
+-->
+<dom-module id="backend-page">
+
+  <template>
+    <style>
+      :host {
+        display: block;
+        box-sizing: border-box;
+      }
+    </style>
+    <content></content>
+  </template>
+
+</dom-module>
+
+<script>
+
+  Polymer({
+
+    is: 'backend-page',
+
+    properties: {
+      name: String
+    }
+
+  });
+
+</script>
