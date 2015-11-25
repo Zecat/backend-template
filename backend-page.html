@@ -12,12 +12,14 @@ Example:
 @hero hero.svg
 -->
 <dom-module id="backend-page">
-
   <template>
     <style>
       :host {
         display: block;
-        box-sizing: border-box;
+        padding: 30px;
+      }
+      :host:not(.iron-selected) {
+        display: none;
       }
     </style>
     <content></content>
@@ -32,7 +34,8 @@ Example:
     is: 'backend-page',
 
     properties: {
-      name: String
+      name: String,
+      route: String
     }
 
   });
