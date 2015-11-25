@@ -47,6 +47,7 @@ Example:
         };
       }
       paper-tab {
+        font-weight: bold;
         @apply(--layout-flex-auto);
       }
       paper-toolbar .middle {
@@ -63,9 +64,6 @@ Example:
           color: var(--default-primary-color);
         }
       }
-      #lateralBar {
-        border-right: 1px solid var(--divider-color);
-      }
       #content {
         min-height: 100vh;
       }
@@ -77,11 +75,6 @@ Example:
         padding-left: 60px;
         font-weight: bold;
         font-size: 28px;
-      }
-      #drawerToolbar {
-        --paper-toolbar-background: white;
-        --paper-toolbar-color: var(--primary-text-color);
-        border-bottom: 1px solid var(--divider-color);
       }
       paper-icon-item {
         position: relative;
@@ -96,7 +89,7 @@ Example:
     </style>
 
     <paper-drawer-panel id="paperDrawerPanel" drawer-width="[[drawerWidth]]">        
-      <paper-scroll-header-panel drawer fixed id="lateralBar">
+      <paper-scroll-header-panel drawer fixed id="lateralBar" class="shadow-elevation-16dp">
         <paper-toolbar id="drawerToolbar">
           <span id="name">[[name]]</span>
         </paper-toolbar>
