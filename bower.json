@@ -33,10 +33,13 @@
     "paper-styles": "PolymerElements/paper-styles#~1.0.13",
     "iron-selector": "PolymerElements/iron-selector#~1.0.8",
     "neon-animation": "PolymerElements/neon-animation#~1.0.8",
-    "neon-slideshow": "https://github.com/Zecat/neon-slideshow.git"
+    "neon-slideshow": "https://github.com/Zecat/neon-slideshow.git",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.2.1",
+    "paper-header-panel": "PolymerElements/paper-header-panel#~1.1.1"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "web-component-tester": "*"
+    "web-component-tester": "*",
+    "paper-item": "PolymerElements/paper-item#~1.1.2"
   }
 }

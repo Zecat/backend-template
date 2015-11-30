@@ -15,7 +15,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <title>backend-template Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="../backend-template.html">
+    <link rel="import" href="../backend-category.html">
+    <link rel="import" href="../backend-page.html">
+    <link rel="import" href="../backend-list-detail.html">
     <link rel="import" href="../../paper-material/paper-material.html">
+    <link rel="import" href="../../paper-item/paper-item.html">
   </head>
   <body unresolved>
     <style is="custom-styles">
@@ -25,6 +29,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
     <backend-template name="EASY BACKEND">
       <backend-category icon="icons:home" name="Category 1" route="cat1">
+        <backend-list-detail  class="shadow-elevation-6dp">
+          <paper-item class="list-item">Item 1</paper-item>
+          <paper-item class="list-item">Item 2</paper-item>
+          <paper-item class="list-item">Item 3</paper-item>
+          <paper-item class="list-item">Item 4</paper-item>
+          <paper-item class="list-item">Item 5</paper-item>
+          <paper-item class="list-item">Item 6</paper-item>
+          <div class="detail">
+            Item detail
+          </div>
+        </backend-list-detail>
+      </backend-category>
+      <backend-category icon="icons:dashboard" name="Category 2" route="cat2">
         <backend-page name="PAGE 1" route="page1">
           <paper-material elevation="1">
             <h1>Content page 1</h1>
@@ -39,30 +56,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <backend-page name="PAGE 2" route="page2">
           <paper-material elevation="1">
             <h1>Content page 2</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </paper-material>
-        </backend-page>
-      </backend-category>
-      <backend-category icon="icons:dashboard" name="Category 2" route="cat2">
-        <backend-page name="PAGE 3" route="page3">
-          <paper-material elevation="1">
-            <h1>Content page 3</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </paper-material>
-        </backend-page>
-        <backend-page name="PAGE 4" route="page4">
-          <paper-material elevation="1">
-            <h1>Content page 4</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

@@ -1,0 +1,36 @@
+<link rel="import" href="../iron-flex-layout/classes/iron-flex-layout.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../iron-selector/iron-selectable.html">
+<link rel="import" href="../paper-drawer-panel/paper-drawer-panel.html">
+<link rel="import" href="../paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../paper-item/paper-icon-item.html">
+<link rel="import" href="../paper-menu/paper-menu.html">
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="backend-list-detail">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <paper-drawer-panel
+      main
+      class="main-drawer-panel"
+      responsive-width="600px"
+      drawer-width="[[_computeListWidth(_isMobile)]]"
+      drawer-toggle-attribute="list-toggle"
+      narrow="{{_isMobile}}">
+      <paper-menu drawer on-iron-activate="_listTap">
+        <content select=".list-item"></content>
+      </paper-menu>
+      <!-- <paper-icon-button icon="arrow-back" list-toggle></paper-icon-button> -->
+      <div main select=".detail"></div>
+    </paper-drawer-panel>
+  </template>
+  <script>
+    Polymer({
+      is: 'backend-list-detail'
+    });
+  </script>
+</dom-module>
