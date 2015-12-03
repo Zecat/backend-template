@@ -1,5 +1,7 @@
+<link rel="import" href="../iron-ajax/iron-ajax.html">
 <link rel="import" href="../iron-flex-layout/classes/iron-flex-layout.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../iron-list/iron-list.html">
 <link rel="import" href="../iron-selector/iron-selectable.html">
 <link rel="import" href="../paper-drawer-panel/paper-drawer-panel.html">
 <link rel="import" href="../paper-icon-button/paper-icon-button.html">
@@ -12,25 +14,50 @@
     <style>
       :host {
         display: block;
+        @apply(--layout-fit);
+        @apply(--layout-horizontal);
+      }
+      :host iron-list {
+        width: 350px;
+        height: 100%;
+        border-right: 1px solid lightgrey;
+      }
+      div {
+        @apply(--layout-flex);
+      }
+      :host:not(.iron-selected) {
+        display: none !important;
       }
     </style>
-    <paper-drawer-panel
-      main
-      class="main-drawer-panel"
-      responsive-width="600px"
-      drawer-width="[[_computeListWidth(_isMobile)]]"
-      drawer-toggle-attribute="list-toggle"
-      narrow="{{_isMobile}}">
-      <paper-menu drawer on-iron-activate="_listTap">
-        <content select=".list-item"></content>
-      </paper-menu>
-      <!-- <paper-icon-button icon="arrow-back" list-toggle></paper-icon-button> -->
-      <div main select=".detail"></div>
-    </paper-drawer-panel>
+      <iron-ajax url="[[url]]" last-response="{{data}}" auto></iron-ajax>
+      <iron-list selection-enabled items="[[data]]" selected-item="{{detail}}">
+        <content selector=".item-template"></content>
+
+      </iron-list>
+      <template>
+      <content selector=".detail-template"></content>
+      </template>
   </template>
   <script>
     Polymer({
-      is: 'backend-list-detail'
+      is: 'backend-list-detail',
+      properties: {
+        name: String,
+        route: String,
+        url: String,
+        data: {
+          type: Array,
+          value: function() {
+            return [];
+          }
+        },
+        detail: {
+          type: Object,
+          value: function() {
+            return {};
+          }
+        }
+      }
     });
   </script>
 </dom-module>

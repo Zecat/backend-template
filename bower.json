@@ -35,7 +35,10 @@
     "neon-animation": "PolymerElements/neon-animation#~1.0.8",
     "neon-slideshow": "https://github.com/Zecat/neon-slideshow.git",
     "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.2.1",
-    "paper-header-panel": "PolymerElements/paper-header-panel#~1.1.1"
+    "paper-header-panel": "PolymerElements/paper-header-panel#~1.1.1",
+    "iron-ajax": "PolymerElements/iron-ajax#~1.1.1",
+    "iron-list": "PolymerElements/iron-list#~1.1.6",
+    "dom-binder": "https://github.com/Zecat/dom-binder.git#master"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

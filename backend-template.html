@@ -64,9 +64,6 @@ Example:
           color: var(--default-primary-color);
         };
       }
-      #content {
-        min-height: 100vh;
-      }
       #name {
         font-size: 18px;
         font-weight: normal;
@@ -75,6 +72,11 @@ Example:
         padding-left: 60px;
         font-weight: bold;
         font-size: 28px;
+      }
+      #mainContent {
+        height: calc(100vh - 64px);
+        @apply(--layout-horizontal);
+        position: relative;
       }
       paper-icon-item {
         position: relative;
@@ -89,7 +91,7 @@ Example:
     </style>
 
     <paper-drawer-panel drawer-width="[[drawerWidth]]">        
-      <paper-scroll-header-panel drawer fixed id="lateralBar" class="shadow-elevation-16dp">
+      <paper-header-panel drawer mode="waterfall" class="shadow-elevation-16dp">
         <paper-toolbar>
           <span id="name">[[name]]</span>
         </paper-toolbar>
@@ -102,8 +104,12 @@ Example:
             </paper-icon-item>
           </template>
         </paper-menu>
-      </paper-scroll-header-panel>
-      <paper-scroll-header-panel main keep-condensed-header condenses scroll-away-topbar header-state="{{headerState}}">
+      </paper-header-panel>
+      <paper-scroll-header-panel
+        main
+        keep-condensed-header
+        scroll-away-topbar
+        header-state="{{headerState}}">
         <paper-toolbar id="mainToolbar" class="tall shadow-transition">
           <div class="center horizontal layout fit">
             <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
@@ -126,7 +132,7 @@ Example:
             </template>
           </iron-pages>
         </paper-toolbar>
-        <div id="content">
+        <div id="mainContent">
           <content></content>
         </div>
       </paper-scroll-header-panel>
