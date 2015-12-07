@@ -4,7 +4,7 @@
   "authors": [
     "Zecat <jullienfelix@gmail.com>"
   ],
-  "description": ".",
+  "description": "An easy material backend structure.",
   "keywords": [
     "web-component",
     "polymer",
@@ -12,7 +12,7 @@
   ],
   "main": "backend-template.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "homepage": "https://github.com/Zecat/backend-template/",
   "ignore": [
     "/.*",
     "/test/"
