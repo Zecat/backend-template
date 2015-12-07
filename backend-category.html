@@ -1,7 +1,6 @@
-<link rel="import" href="../iron-selector/iron-selectable.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
-<!-- <link rel="import" href="../neon-slideshow/neon-slideshow-behavior.html">
-<link rel="import" href="../neon-slideshow/neon-slideshow-shared-styles.html"> -->
+<link rel="import" href="../neon-slideshow/neon-slideshow-pages-behavior.html">
+<link rel="import" href="../neon-slideshow/neon-pages-shared-styles.html">
 <link rel="import" href="../polymer/polymer.html">
 
 <!--
@@ -20,15 +19,10 @@ Example:
   <template>
     <style>
       :host {
-        @apply(--layout-fit);
-      }
-      :host:not(.iron-selected) {
-        display: none !important;
+        display: block;
       }
     </style>
-    <!-- <div id="slides"> -->
-      <content></content>
-    <!-- </div> -->
+    <content></content>
   </template>
 
 </dom-module>
@@ -50,7 +44,7 @@ Example:
     },
 
     behaviors: [
-      Polymer.IronSelectableBehavior
+      Zecat.NeonSlideshowPagesBehavior
     ],
 
     attached: function() {

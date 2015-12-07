@@ -17,9 +17,13 @@ Example:
       :host {
         display: block;
         padding: 30px;
+        @apply(--layout-fit);
       }
-      :host:not(.iron-selected) {
-        display: none;
+      :host:not(.iron-selected):not(.neon-animating) {
+        display: none !important;
+      }
+      :host.neon-animating {
+        pointer-events: none;
       }
     </style>
     <content></content>

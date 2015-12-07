@@ -4,6 +4,9 @@
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../iron-pages/iron-pages.html">
 <link rel="import" href="../iron-selector/iron-selectable.html">
+<link rel="import" href="../neon-animation/neon-animated-pages.html">
+<link rel="import" href="../neon-animation/animations/fade-in-animation.html">
+<link rel="import" href="../neon-animation/animations/fade-out-animation.html">
 <link rel="import" href="../paper-drawer-panel/paper-drawer-panel.html">
 <link rel="import" href="../paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../paper-item/paper-icon-item.html">
@@ -73,11 +76,6 @@ Example:
         font-weight: bold;
         font-size: 28px;
       }
-      #mainContent {
-        height: calc(100vh - 64px);
-        @apply(--layout-horizontal);
-        position: relative;
-      }
       paper-icon-item {
         position: relative;
         --paper-item-focused-before: {
@@ -109,6 +107,7 @@ Example:
         main
         keep-condensed-header
         scroll-away-topbar
+        no-reveal
         header-state="{{headerState}}">
         <paper-toolbar id="mainToolbar" class="tall shadow-transition">
           <div class="center horizontal layout fit">
@@ -132,9 +131,13 @@ Example:
             </template>
           </iron-pages>
         </paper-toolbar>
-        <div id="mainContent">
+        <neon-animated-pages
+          selected="{{selected}}"
+          attr-for-selected="route"
+          entry-animation="fade-in-animation"
+          exit-animation="fade-out-animation">
           <content></content>
-        </div>
+        </neon-animated-pages>
       </paper-scroll-header-panel>
     </paper-drawer-panel>
   </template>
