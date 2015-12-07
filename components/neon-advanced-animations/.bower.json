@@ -1,0 +1,36 @@
+{
+  "name": "neon-advanced-animations",
+  "authors": [
+    "Anonymous <anonymous@example.com>"
+  ],
+  "description": "An element providing a solution to no problem in particular.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "seed"
+  ],
+  "main": "neon-advanced-animations.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/<USERNAME>/seed-element/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0",
+    "neon-animation": "PolymerElements/neon-animation#~1.0.8"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  },
+  "_release": "db7f51f80f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "db7f51f80f8d229c9eac9127ea377057613289ff"
+  },
+  "_source": "https://github.com/Zecat/neon-advanced-animations.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/Zecat/neon-advanced-animations.git"
+}

@@ -1,0 +1,55 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-controls/iron-controllable-behavior.html">
+<link rel="import" href="../iron-controls/iron-slideshow-controls.html">
+<link rel="import" href="neon-pages-shared-styles.html">
+<link rel="import" href="neon-slideshow-pages-behavior.html">
+
+<!--
+
+Example:
+
+@group Neon Elements
+@element neon-slideshow-pages
+@demo demo/index.html
+@hero hero.svg
+-->
+<dom-module id="neon-slideshow-pages">
+  <style include="neon-pages-shared-styles">
+  </style>
+  <template>
+    <div id="slides">
+      <content></content>
+    </div>
+    <iron-slideshow-controls arrows="[[arrows]]">
+    </iron-slideshow-controls>
+  </template>
+</dom-module>
+<script>
+(function() {
+  Polymer({
+    is: 'neon-slideshow-pages',
+    properties: {
+      /**
+       * If true, display arrows controls
+       */
+      arrows: {
+        type: Boolean,
+        value: false
+      }
+    },
+    behaviors: [
+      Zecat.IronControllableBehavior,
+      Zecat.NeonSlideshowPagesBehavior
+    ]
+  })
+})();
+</script>
